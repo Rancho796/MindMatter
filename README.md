@@ -18,4 +18,36 @@ To set up MindMatter locally:
 1.**Clone the repository**:
     '''bash
     git clone https://github.com/arfs-zaffar-om/Matter.git
-Set up a Python virtual environment:
+
+2.**Set up a Python virtual environment**:
+    '''bash
+    python -m venv myenv
+
+3.**Activate the Python Environment**:
+    '''bash
+    myenv\Scripts\activate
+
+4.**Install All Dependencies Using the requirements.txt File**:
+    '''bash
+    pip install -r requirements.txt
+
+5.**Change the Working Directory to src**:
+    '''bash
+    cd src
+
+6.**Create a `.env` File in the `src` Folder and Add the Following Variables**:
+    '''plaintext
+    SECRET_KEY=
+    DEBUG=
+    USER=
+    PASSWORD=
+    PORT=
+    HOST=
+
+7.**Create Workspace and Import Collection (from the provided file)**:
+    '''plaintext
+    1.Click on the Import button.
+    2.Select the file you previously shared that contains the collection.
+    3.Once imported, go to Environments and create a new environment.
+    4.In the new environment, add a variable named devurl with the appropriate development URL for your local environment.
+
