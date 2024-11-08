@@ -16,27 +16,27 @@ MindMatter is a full-featured blogging platform designed to provide users with a
 To set up MindMatter locally:
 
 1.**Clone the repository**:
-    '''bash
+    ```bash
     git clone https://github.com/arfs-zaffar-om/Matter.git
 
 2.**Set up a Python virtual environment**:
-    '''bash
+    ```bash
     python -m venv myenv
 
 3.**Activate the Python Environment**:
-    '''bash
+    ```bash
     myenv\Scripts\activate
 
 4.**Install All Dependencies Using the requirements.txt File**:
-    '''bash
+    ```bash
     pip install -r requirements.txt
 
 5.**Change the Working Directory to src**:
-    '''bash
+    ```bash
     cd src
 
 6.**Create a `.env` File in the `src` Folder and Add the Following Variables**:
-    '''plaintext
+    ```plaintext
     SECRET_KEY=
     DEBUG=
     USER=
@@ -45,7 +45,7 @@ To set up MindMatter locally:
     HOST=
 
 7.**Create Workspace and Import Collection (from the provided file)**:
-    '''plaintext
+    ```plaintext
     1.Click on the Import button.
     2.Select the file you previously shared that contains the collection.
     3.Once imported, go to Environments and create a new environment.
