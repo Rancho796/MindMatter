@@ -23,17 +23,21 @@ To set up MindMatter locally:
     ```bash
     python -m venv myenv
 
+
 3.**Activate the Python Environment**:
     ```bash
-    myenv\Scripts\activate
+    source myenv/bin/activate
+
 
 4.**Install All Dependencies Using the requirements.txt File**:
     ```bash
     pip install -r requirements.txt
 
+
 5.**Change the Working Directory to src**:
     ```bash
     cd src
+
 
 6.**Create a `.env` File in the `src` Folder and Add the Following Variables**:
     ```plaintext
@@ -43,6 +47,7 @@ To set up MindMatter locally:
     PASSWORD=
     PORT=
     HOST=
+
 
 7.**Create Workspace and Import Collection (from the provided file)**:
     ```plaintext
