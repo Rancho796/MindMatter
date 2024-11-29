@@ -8,8 +8,9 @@ from rest_framework import status
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
 from rest_framework.views import APIView
-from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
+from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView,ListAPIView
 from rest_framework.filters import OrderingFilter
+from rest_framework.exceptions import PermissionDenied
 
 # blogs = {
 #     1: {
@@ -111,3 +112,8 @@ def perform_destroy(self,instance):
     if instance.image:
         instance.image.delete(save=False)
     instance.delete()
+
+class GetUserBlog(ListAPIView):
+    serializer_class=BlogSerializer
+    def get_queryset(self):
+        return Blog.objects.filter(creator=self.request.user)
