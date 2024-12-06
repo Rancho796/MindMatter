@@ -8,3 +8,5 @@ django-filter==24.3
 drf-yasg==1.21.8
 django-silk==5.3.1
 djangorestframework-simplejwt==5.3.1
+celery==5.4.0
+redis==5.2.0

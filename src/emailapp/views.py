@@ -11,5 +11,5 @@ class SendEmailView(APIView):
           if serializer.is_valid():
                serializer.send_email()
                return Response({'message':'Email sent sucessfully!'},status=status.HTTP_200_OK)
-          return Response(serializer.erros,status=status.HTTP_400_BAD_REQUEST)
+          return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
 
