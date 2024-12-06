@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "blogapp",
     "userapp",
     "commentapp",
+    "emailapp",
     # Third party
     "rest_framework",
     "django_filters",
@@ -157,3 +158,10 @@ SIMPLE_JWT = {
     ),  # Increase to 12 hours or your desired
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),  # Increase to 7 days or your desired
 }
+
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com" #Example for gmail
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER=env("EMAIL_HOST_USER") #Your email address
+EMAIL_HOST_PASSWORD=env("EMAIL_HOST_PASSWORD") #Your email's app password (not for log in)
